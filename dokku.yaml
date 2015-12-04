@@ -1,8 +1,8 @@
 ---
 - hosts: webservers
+  user: root
   tasks:
     - name: Downloands dokku script
       shell: wget https://raw.githubusercontent.com/progrium/dokku/v0.4.5/bootstrap.sh
     - name: Installing dokku
       shell: sudo DOKKU_TAG=v0.4.5 bash bootstrap.sh
-
